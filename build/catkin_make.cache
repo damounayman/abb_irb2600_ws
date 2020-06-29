@@ -1,0 +1,2 @@
+abb_irb2600_gazebo:abb_irb2600_interface:abb_irb2600_moveit_config:abb_irb2600_support
+-DCATKIN_DEVEL_PREFIX=/home/geekayman/irb2600_ws/devel -DCMAKE_INSTALL_PREFIX=/home/geekayman/irb2600_ws/install -G Unix Makefiles

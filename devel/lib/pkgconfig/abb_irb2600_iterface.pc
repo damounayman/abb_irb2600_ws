@@ -1,0 +1,8 @@
+prefix=/home/geekayman/irb2600_ws/devel
+
+Name: abb_irb2600_iterface
+Description: Description of abb_irb2600_iterface
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

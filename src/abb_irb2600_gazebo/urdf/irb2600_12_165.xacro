@@ -1,0 +1,73 @@
+<?xml version="1.0" ?>
+
+<robot name="abb_irb2600_12_165" xmlns:xacro="http://ros.org/wiki/xacro">
+  <xacro:include filename="$(find abb_irb2600_gazebo)/urdf/irb2600_12_165_macro.xacro" />
+
+  <xacro:abb_irb2600_12_165_gazebo prefix="" />
+
+  <!-- connect robot with world -->
+  <link name="world" />
+
+  <link name="workcell">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://abb_irb2600_support/meshes/irb2600_12_165/visual/workcell.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0.25" rpy="0 0 0" />
+      <geometry>
+        <box size="0.5 0.5 0.5"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="92.5052"/>
+      <inertia ixx="1.0" ixy="1.0" ixz="1.0" iyy="1.0" iyz="1.0" izz="1.0" />
+    </inertial>
+  </link>
+
+  <!--
+  <link name="postecolla">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://abb_irb2600_support/meshes/irb2600_12_165/visual/postecolla.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="1 1 0.5" rpy="0 0 0" />
+      <geometry>
+        <box size="1.0 0.5 1.00"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="92.5052"/>
+      <inertia ixx="1.0" ixy="1.0" ixz="1.0" iyy="1.0" iyz="1.0" izz="1.0" />
+    </inertial>
+  </link>-->
+
+  <joint name="world_to_support" type="fixed">
+    <parent link="world" />
+    <child link="support" />
+  </joint>
+
+
+  <joint name="workcell" type="fixed">
+    <parent link="world" />
+    <child link="workcell" />
+  </joint>
+  <!--
+  <joint name="postecolla" type="fixed">
+    <parent link="world" />
+    <child link="postecolla" />
+  </joint>-->
+  <!-- ros_control plugin -->
+  <gazebo>
+    <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+      <robotNamespace>/</robotNamespace>
+      <robotSimType>gazebo_ros_control/DefaultRobotHWSim</robotSimType>
+    </plugin>
+  </gazebo>
+
+</robot>
