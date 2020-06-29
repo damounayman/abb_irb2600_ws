@@ -14,3 +14,5 @@ dynamic simulation in gazebo of abb irb 2600
 | [Ubuntu](https://www.ubuntu.com/) | 18.04             |
 
 ## Quick Start
+
+![](./media/demo1.gif)
