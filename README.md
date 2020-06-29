@@ -44,7 +44,7 @@ $ source devel/setup.bash
 $ catkin_make
 ```
 ---
-## Quick Start
+## Use
 
 ![](./media/demo1.gif)
 
