@@ -4,8 +4,6 @@
 
 dynamic simulation in gazebo of abb irb 2600 
 ## Table of Contents
-
-> If your `README` has a lot of info, section headers might be nice.
 - [About](#about)
 - [Dependencies](#dependencies)
 - [Installation](#installation)
