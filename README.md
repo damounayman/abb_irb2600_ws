@@ -9,7 +9,7 @@ dynamic simulation in gazebo of abb irb 2600
 - [About](#about)
 - [Dependencies](#dependencies)
 - [Installation](#installation)
-- [Quick Start](#Quick Start)
+- [Use](#use)
 - [License](#license)
 
 
