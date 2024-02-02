@@ -1,8 +1,0 @@
-prefix=/home/geekayman/irb2600_ws/devel
-
-Name: abb_irb2600_gazebo
-Description: Description of abb_irb2600_gazebo
-Version: 0.0.1
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 
